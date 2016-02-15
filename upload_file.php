@@ -3,14 +3,14 @@
 $allowedExts = array("jpg", "jpeg", "gif", "png", "mp3", "mp4", "wma");
 $extension = pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
 
-if ((($_FILES["file"]["type"] == "video/mp4")
+if (($_FILES["file"]["type"] == "video/mp4")
 || ($_FILES["file"]["type"] == "audio/mp3")
 || ($_FILES["file"]["type"] == "audio/wma")
 || ($_FILES["file"]["type"] == "image/pjpeg")
 || ($_FILES["file"]["type"] == "image/gif")
 || ($_FILES["file"]["type"] == "image/jpeg"))
 
-&& in_array($extension, $allowedExts))
+
 
   {
   if ($_FILES["file"]["error"] > 0)
